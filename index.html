@@ -14,10 +14,18 @@
 }
 
 body {
- <div style="text-align:center; padding: 20px;">
-  <img src="logo.png" alt="F&B Outdoor Services Logo" style="width:220px;">
-</div>
   background-color: #f5f5f5;
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
+
+.logo img {
+  width: 220px;
 }
 
 /* HERO SECTION */
@@ -51,14 +59,8 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background-color: #1b5e20;
-}
-
-/* CONTENT SECTIONS */
 .section {
   max-width: 1100px;
   margin: auto;
@@ -91,15 +93,11 @@ body {
   color: #1b5e20;
 }
 
-/* QUOTE SECTION */
 .quote {
   background: #2e7d32;
   color: white;
   padding: 60px 20px;
-}
-
-.quote h2 {
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 footer {
@@ -112,6 +110,11 @@ footer {
 </head>
 
 <body>
+
+<!-- LOGO -->
+<div class="logo">
+  <img src="logo.png" alt="F&B Outdoor Services Logo">
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -129,37 +132,13 @@ footer {
 <!-- SERVICES -->
 <section class="section">
   <h2>Our Services</h2>
-
   <div class="services">
-    <div class="card">
-      <h3>Lawn Mowing</h3>
-      <p>Clean, even cuts that keep your yard looking sharp.</p>
-    </div>
-
-    <div class="card">
-      <h3>Edging & Trimming</h3>
-      <p>Detailed edging and weed trimming for a finished look.</p>
-    </div>
-
-    <div class="card">
-      <h3>Yard Cleanups</h3>
-      <p>Seasonal and full property cleanups available.</p>
-    </div>
-
-    <div class="card">
-      <h3>Mulching</h3>
-      <p>Fresh mulch installation to improve curb appeal.</p>
-    </div>
-
-    <div class="card">
-      <h3>Bush & Hedge Trimming</h3>
-      <p>Neat and professional shrub shaping.</p>
-    </div>
-
-    <div class="card">
-      <h3>Small Tree & Brush Removal</h3>
-      <p>Light tree and brush removal services.</p>
-    </div>
+    <div class="card"><h3>Lawn Mowing</h3><p>Clean, even cuts that keep your yard looking sharp.</p></div>
+    <div class="card"><h3>Edging & Trimming</h3><p>Detailed edging and weed trimming for a finished look.</p></div>
+    <div class="card"><h3>Yard Cleanups</h3><p>Seasonal and full property cleanups available.</p></div>
+    <div class="card"><h3>Mulching</h3><p>Fresh mulch installation to improve curb appeal.</p></div>
+    <div class="card"><h3>Bush & Hedge Trimming</h3><p>Neat and professional shrub shaping.</p></div>
+    <div class="card"><h3>Small Tree & Brush Removal</h3><p>Light tree and brush removal services.</p></div>
   </div>
 </section>
 
@@ -169,10 +148,10 @@ footer {
   <p>Proudly serving Charlottesville, VA and surrounding areas.</p>
 </section>
 
-<!-- QUOTE CTA -->
+<!-- QUOTE -->
 <section class="quote">
   <h2>Get Your Free Quote Today</h2>
-  <p>Call or text us at 434-960-2833 for fast and reliable service.</p>
+  <p>Call or text us at 434-960-2833</p>
   <br>
   <a href="tel:4349602833" class="btn">Request Free Quote</a>
 </section>
