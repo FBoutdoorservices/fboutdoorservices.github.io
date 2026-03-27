@@ -1,216 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F&B Outdoor Services</title>
-  <!-- AOS Animation CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" integrity="sha512-X8xRrt9PrhZZ5MH69I/5P1+7G7bYtYxurS6vB6pFf/0khPM0a+Vq7aGf9v5S7smM7nZ12pKpZyM12ylTn6P0Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    :root {
-      --primary-color: #2e7d32;
-      --secondary-color: #a5d6a7;
-      --accent-color: #ffffff;
-      --font-family: 'Poppins', sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F&B Outdoor Services | Charlottesville Lawn Care</title>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-family); color: #333; line-height: 1.6; }
+<!-- AOS Animation CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 
-    a { color: var(--primary-color); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    /* Header Hero */
-    header { position: relative; color: var(--accent-color); text-align: center; }
-    header .hero {
-      position: relative;
-      background: url('https://images.unsplash.com/photo-1592849637037-d4aefb7f8c32?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
-      height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    header .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(to bottom right, rgba(46,125,50,0.7), rgba(165,214,167,0.5));
-      z-index: 1;
-    }
-    header h1, header p, header button { position: relative; z-index: 2; }
-    header h1 { font-size: 3rem; margin-bottom: 0.5rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-    header p { font-size: 1.25rem; margin-bottom: 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-    header button { font-size: 1.2rem; }
+body {
+  background-color: #f5f5f5;
+}
 
-    /* Navbar */
-    nav { background-color: var(--secondary-color); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; padding: 0.75rem 1rem; margin: 0; }
-    nav ul li { margin: 0; }
-    nav a { font-weight: bold; font-size: 1rem; }
-    nav a:hover { color: var(--primary-color); }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+.hero p {
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
 
-    /* Sections */
-    section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
-    h2 { color: var(--primary-color); margin-bottom: 2rem; text-align: center; }
+/* BUTTONS */
+.btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+  background-color: #256029;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
 
-    /* Cards */
-    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 2rem; }
-    .card {
-      background-color: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(46,125,50,0.4); }
-    .card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s; }
-    .card:hover img { transform: scale(1.05); }
-    .card-content { padding: 1rem; }
-    .card-content h3 { margin-bottom: 0.5rem; }
-    .card-content p { color: #555; }
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    /* Buttons */
-    button { background-color: var(--primary-color); color: var(--accent-color); border: none; padding: 0.75rem 1.5rem; cursor: pointer; border-radius: 5px; transition: 0.3s; }
-    button:hover { background-color: #256029; }
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
 
-    /* Mobile Quote Button */
-    .mobile-quote { position: fixed; bottom: 1rem; right: 1rem; z-index: 1000; display: none; }
+/* SERVICES GRID */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
 
-    /* Footer */
-    footer { background-color: var(--primary-color); color: var(--accent-color); text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
+.card {
+  background: rgba(46,125,50,0.85);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card h3 {
+  margin-bottom: 12px;
+}
+.card p {
+  color: #f5f5f5;
+}
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.6);
+}
 
-    /* Section Separator */
-    .separator { width: 100%; height: 50px; background: #f1f1f1; clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%); margin-bottom: -50px; }
+/* QUOTE SECTION */
+.quote {
+  background: #2e7d32;
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 40px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav ul { flex-direction: column; gap: 1rem; }
-      .mobile-quote { display: block; }
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-    }
-  </style>
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 18px; }
+  .card { padding: 18px; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <header>
-    <div class="hero" data-aos="fade-down">
-      <h1>F&B Outdoor Services</h1>
-      <p data-aos="fade-up">Professional Landscaping & Lawn Services</p>
-      <a href="#contact"><button data-aos="fade-up">Get a Quote</button></a>
-    </div>
-  </header>
+<!-- HERO -->
+<section class="hero" data-aos="fade-down">
+  <h1>F&B Outdoor Services</h1>
+  <p>Professional Lawn Care & Landscaping in Charlottesville, VA</p>
+  <a href="tel:4349602833" class="btn">Call Now For A Free Quote</a>
+</section>
 
-  <!-- Navbar -->
-  <nav data-aos="fade-down">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#works">Works</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- SERVICES -->
+<section class="section">
+  <h2 data-aos="fade-up">Our Services</h2>
+  <div class="services">
+    <div class="card" data-aos="fade-right" data-aos-delay="0"><h3>Lawn Mowing</h3><p>Clean, even cuts that keep your yard looking sharp.</p></div>
+    <div class="card" data-aos="fade-left" data-aos-delay="100"><h3>Edging & Trimming</h3><p>Detailed edging for a finished look.</p></div>
+    <div class="card" data-aos="fade-right" data-aos-delay="200"><h3>Yard Cleanups</h3><p>Full property and seasonal cleanups.</p></div>
+    <div class="card" data-aos="fade-left" data-aos-delay="300"><h3>Mulching</h3><p>Fresh mulch to improve curb appeal.</p></div>
+    <div class="card" data-aos="fade-right" data-aos-delay="400"><h3>Bush & Hedge Trimming</h3><p>Professional shrub shaping.</p></div>
+    <div class="card" data-aos="fade-left" data-aos-delay="500"><h3>Brush Removal</h3><p>Light brush and overgrowth removal.</p></div>
+  </div>
+</section>
 
-  <!-- Home -->
-  <section id="home" data-aos="fade-right">
-    <h2>Welcome</h2>
-    <p style="text-align:center;">Reliable, professional, and ready to transform your outdoor space. Call or text for a free quote!</p>
-  </section>
+<!-- QUOTE -->
+<section class="quote" data-aos="zoom-in">
+  <h2>Get Your Free Quote Today</h2>
+  <p>Call or text 434-960-2833</p>
+  <br>
+  <a href="tel:4349602833" class="btn">Request Free Quote</a>
+</section>
 
-  <div class="separator"></div>
+<!-- FOOTER -->
+<footer data-aos="fade-up">
+  © 2026 F&B Outdoor Services | Charlottesville, VA
+</footer>
 
-  <!-- About -->
-  <section id="about" data-aos="fade-left">
-    <h2>About F&B Outdoor Services</h2>
-    <p style="text-align:center;">We provide professional landscaping and lawn maintenance in Charlottesville. From mowing to full landscape projects, we create beautiful outdoor spaces.</p>
-  </section>
-
-  <div class="separator"></div>
-
-  <!-- Services -->
-  <section id="services" data-aos="fade-right">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card" data-aos="zoom-in">
-        <img src="https://images.unsplash.com/photo-1592849637037-d4aefb7f8c32?auto=format&fit=crop&w=800&q=80" alt="Lawn Mowing">
-        <div class="card-content">
-          <h3>Lawn Mowing</h3>
-          <p>Freshly cut and maintained lawns with professional care.</p>
-        </div>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="https://images.unsplash.com/photo-1597791539880-8cc1f5e7b98e?auto=format&fit=crop&w=800&q=80" alt="Landscaping Work">
-        <div class="card-content">
-          <h3>Landscape Design</h3>
-          <p>Custom landscaping projects to beautify your yard and outdoor spaces.</p>
-        </div>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1627741631341-ef01c4c1766b?auto=format&fit=crop&w=800&q=80" alt="Tree Trimming">
-        <div class="card-content">
-          <h3>Tree Trimming & Removal</h3>
-          <p>Safe and professional tree services for a cleaner yard.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="separator"></div>
-
-  <!-- Works -->
-  <section id="works" data-aos="fade-left">
-    <h2>Our Works</h2>
-    <div class="cards">
-      <div class="card" data-aos="flip-left">
-        <img src="https://images.unsplash.com/photo-1592849637037-d4aefb7f8c32?auto=format&fit=crop&w=800&q=80" alt="Freshly Mowed Lawn">
-        <div class="card-content">
-          <h3>Lawn Mowing Project</h3>
-          <p>Before & after transformation of a residential lawn.</p>
-        </div>
-      </div>
-      <div class="card" data-aos="flip-left" data-aos-delay="100">
-        <img src="https://images.unsplash.com/photo-1597791539880-8cc1f5e7b98e?auto=format&fit=crop&w=800&q=80" alt="Landscape Work">
-        <div class="card-content">
-          <h3>Landscape Installation</h3>
-          <p>Adding plants, mulch, and hardscape for a beautiful yard.</p>
-        </div>
-      </div>
-      <div class="card" data-aos="flip-left" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1627741631341-ef01c4c1766b?auto=format&fit=crop&w=800&q=80" alt="Tree Trimming">
-        <div class="card-content">
-          <h3>Tree & Shrub Services</h3>
-          <p>Pruning and shaping trees and shrubs for optimal health.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="separator"></div>
-
-  <!-- Contact -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Get a Quote</h2>
-    <p style="text-align:center;">Call or text to schedule your landscaping service.</p>
-    <p style="text-align:center;">📱 Call/Text: <a href="tel:4349602833">434-960-2833</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer data-aos="fade-up">
-    <p>&copy; 2026 F&B Outdoor Services | Call or Text: 434-960-2833</p>
-  </footer>
-
-  <!-- Mobile Call/Text Button -->
-  <a href="tel:4349602833" class="mobile-quote"><button>Call/Text</button></a>
-
-  <!-- AOS Animation JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha512-4l1n/6hXjBxB+URK/tYcR5sPGeB3uV/EYYogOCzAlDS1+3KqLkC3r6nAxKxyxO+dX8r6N5rKcV7g6VqKiX0Ymw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+<!-- AOS Animation JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true, easing: 'ease-in-out' });
+</script>
 
 </body>
 </html>
