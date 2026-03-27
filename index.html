@@ -1,116 +1,97 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F&B Outdoor Services</title>
+<style>
+  body { margin:0; font-family: Arial, Helvetica, sans-serif; color:#222; }
+  nav {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:15px 30px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    position:sticky; top:0;
+  }
+  nav img { height:60px; }
+  .btn {
+    background:#f4b400; color:#000; padding:12px 22px;
+    border-radius:6px; text-decoration:none; font-weight:bold;
+  }
+  .hero {
+    background:url('https://images.unsplash.com/photo-1598514982841-1a0c7d98d9f0') center/cover no-repeat;
+    height:85vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; color:white;
+  }
+  .hero-overlay {
+    background:rgba(0,0,0,0.55); padding:40px; border-radius:10px;
+  }
+  section { padding:70px 20px; }
+  h2 { text-align:center; color:#1f6f43; font-size:36px; margin-bottom:40px; }
+  .services, .why {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px; max-width:1000px; margin:0 auto;
+  }
+  .card {
+    background:#fff; padding:30px; border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center; font-weight:600;
+  }
+  .cta {
+    background:#1f6f43; color:white; text-align:center;
+    padding:60px 20px;
+  }
+  footer {
+    text-align:center; padding:20px; background:#f3f3f3;
+  }
+</style>
+</head>
 
-export default function App() {
-  return (
-    <div className="font-sans text-gray-800 scroll-smooth">
+<body>
 
-      {/* NAVBAR */}
-      <nav className="fixed w-full bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">F&B Outdoor Services</h1>
-          <div className="hidden md:flex gap-6 font-medium">
-            <a href="#services">Services</a>
-            <a href="#work">Our Work</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#about">About</a>
-            <a
-              href="tel:4349602833"
-              className="bg-green-600 text-white px-4 py-2 rounded-lg"
-            >
-              Call 434-960-2833
-            </a>
-          </div>
-        </div>
-      </nav>
+<nav>
+  <img src="logo.png" alt="F&B Outdoor Services Logo">
+  <a class="btn" href="tel:4349602833">Call For Quote</a>
+</nav>
 
-      {/* HERO */}
-      <section
-        className="h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1598908314732-07113901949e?auto=format&fit=crop&w=1950&q=80')" }}
-      >
-        <div className="bg-black/50 p-10 rounded-xl">
-          <h2 className="text-5xl font-bold mb-4">Professional Lawn & Landscaping</h2>
-          <p className="mb-4 text-lg">Reliable, Affordable, Quality Work Every Time</p>
-          <p className="mb-6 font-semibold">Serving Charlottesville, VA and surrounding areas</p>
-          <div className="flex justify-center gap-4">
-            <a href="tel:4349602833" className="bg-green-600 px-6 py-3 rounded-lg font-semibold">Call Now</a>
-            <a href="#contact" className="bg-white text-black px-6 py-3 rounded-lg font-semibold">Get a Free Quote</a>
-          </div>
-        </div>
-      </section>
+<div class="hero">
+  <div class="hero-overlay">
+    <h1 style="font-size:48px; margin-bottom:15px;">F&B Outdoor Services</h1>
+    <p style="font-size:20px; margin-bottom:25px;">
+      Serving Charlottesville, VA & Surrounding Areas
+    </p>
+    <a class="btn" href="tel:4349602833">Call Now For a Free Quote</a>
+  </div>
+</div>
 
-      {/* SERVICES */}
-      <section id="services" className="py-24 bg-gray-100">
-        <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
-          {[
-            { title: "Lawn Mowing & Maintenance", icon: "🌿" },
-            { title: "Mulching & Bed Edging", icon: "🛠️" },
-            { title: "Hedge Trimming & Pruning", icon: "✂️" },
-            { title: "Leaf Removal", icon: "🍂" },
-            { title: "Seasonal Cleanups", icon: "🧹" },
-            { title: "Landscape Installations", icon: "🏡" },
-          ].map((service, index) => (
-            <div key={index} className="p-8 shadow-xl rounded-2xl bg-white text-center">
-              <div className="text-5xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
+<section style="background:#f7f9f6; border-top:4px solid #1f6f43;">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="card">Lawn Mowing & Edging</div>
+    <div class="card">Mulching</div>
+    <div class="card">Leaf Removal</div>
+    <div class="card">Yard Cleanups</div>
+    <div class="card">Bush & Hedge Trimming</div>
+    <div class="card">Debris Hauling</div>
+  </div>
+</section>
 
-      {/* WORK / BEFORE AFTER */}
-      <section id="work" className="py-24">
-        <h2 className="text-4xl font-bold text-center mb-16">Our Work</h2>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
-          {[1, 2, 3, 4, 5, 6].map((n) => (
-            <div key={n} className="rounded-xl overflow-hidden shadow-lg">
-              <img src={`https://source.unsplash.com/600x400/?lawn,landscape,grass&sig=${n}`} alt="Work example" className="w-full"/>
-            </div>
-          ))}
-        </div>
-      </section>
+<section style="border-top:4px solid #1f6f43;">
+  <h2>Why Choose Us</h2>
+  <div class="why">
+    <div class="card">Reliable and on-time service</div>
+    <div class="card">Affordable and honest pricing</div>
+    <div class="card">Attention to detail on every job</div>
+    <div class="card">Local hardworking small business</div>
+  </div>
+</section>
 
-      {/* TESTIMONIALS */}
-      <section id="reviews" className="py-24 bg-gray-100">
-        <h2 className="text-4xl font-bold text-center mb-16">Customer Testimonials</h2>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 px-6">
-          {[
-            "F&B transformed our yard! Highly recommend.",
-            "Fast, professional, and very friendly.",
-            "Our lawn has never looked better!"
-          ].map((review, i) => (
-            <div key={i} className="p-8 shadow-xl rounded-2xl bg-white">
-              <p className="mb-4">⭐⭐⭐⭐⭐</p>
-              <p>{review}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+<div class="cta">
+  <h2 style="color:white;">Ready to make your yard look great?</h2>
+  <a class="btn" href="tel:4349602833">434-960-2833</a>
+</div>
 
-      {/* ABOUT */}
-      <section id="about" className="py-24">
-        <div className="max-w-5xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold mb-8">About F&B Outdoor Services</h2>
-          <p className="text-lg leading-relaxed">
-            We are a hardworking local landscaping and lawn care company committed to delivering reliable, professional service. Every property is treated with care and attention to detail.
-          </p>
-        </div>
-      </section>
+<footer>
+  © 2026 F&B Outdoor Services
+</footer>
 
-      {/* CONTACT */}
-      <section id="contact" className="py-24 bg-green-600 text-white text-center px-6">
-        <h2 className="text-4xl font-bold mb-6">Request a Free Quote</h2>
-        <p className="mb-6 text-lg">
-          Serving Charlottesville, VA and surrounding areas. Call now: <strong>434-960-2833</strong>
-        </p>
-        <a href="tel:4349602833" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold">Call Now</a>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="bg-gray-900 text-white text-center py-6">
-        © {new Date().getFullYear()} F&B Outdoor Services
-      </footer>
-    </div>
-  );
-}
+</body>
+</html>
