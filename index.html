@@ -3,193 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F&B Outdoor Services | Lawn Care Charlottesville</title>
+<title>F&B Outdoor Services | Charlottesville Lawn Care</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-  background:#ffffff;
-  color:#222;
+body {
+  background-color: #f5f5f5;
 }
 
-/* TOP LOGO BAR */
-.topbar{
-  background:white;
-  text-align:center;
-  padding:15px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+/* HEADER / NAVBAR */
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-.topbar img{
-  width:200px;
+.logo img {
+  width: 150px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #2e7d32;
 }
 
 /* HERO */
-.hero{
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-  url('https://images.unsplash.com/photo-1558904541-efa843a96f01') center/cover no-repeat;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-  padding:20px;
+.hero {
+  margin-top: 90px;
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1598902108854-10e335adac99') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-.hero h1{
-  font-size:56px;
-  margin-bottom:15px;
-  letter-spacing:1px;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-.hero p{
-  font-size:22px;
-  margin-bottom:30px;
+.hero p {
+  font-size: 22px;
+  margin-bottom: 25px;
 }
 
-.btn{
-  background:#2e7d32;
-  padding:16px 28px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:5px;
-  font-size:18px;
+.btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
 }
 
-/* SECTION */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
-  text-align:center;
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.section h2{
-  font-size:36px;
-  margin-bottom:20px;
-  color:#2e7d32;
+.section h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 32px;
 }
 
-/* SERVICES GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-  margin-top:40px;
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.box{
-  padding:30px;
-  border:1px solid #e0e0e0;
-  border-radius:8px;
-  background:white;
-  transition:0.3s;
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.box:hover{
-  transform:translateY(-6px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+.quote {
+  background: #2e7d32;
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
 }
 
-.box h3{
-  margin-bottom:10px;
-  color:#1b5e20;
-}
-
-/* QUOTE STRIP */
-.cta{
-  background:#1b5e20;
-  color:white;
-  text-align:center;
-  padding:60px 20px;
-}
-
-.cta h2{
-  margin-bottom:20px;
-}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:20px;
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
-<div class="topbar">
-  <img src="logo.png" alt="F&B Outdoor Services Logo">
-</div>
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="F&B Outdoor Services Logo">
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#area">Service Area</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <h1>F&B Outdoor Services</h1>
-  <p>Lawn Care & Landscaping in Charlottesville, Virginia</p>
-  <a href="tel:4349602833" class="btn">Call For Free Quote</a>
+  <p>Professional Lawn Care & Landscaping in Charlottesville, VA</p>
+  <a href="tel:4349602833" class="btn">Call Now For A Free Quote</a>
 </section>
 
-<!-- ABOUT -->
-<section class="section">
-  <h2>Professional Lawn & Landscape Services</h2>
-  <p>We provide high-quality lawn care and landscaping designed to keep your property looking clean, sharp, and well maintained. Every job is personally quoted to ensure the best results for your yard.</p>
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <p>We provide high-quality lawn care and landscaping services to keep your property looking clean, sharp, and well-maintained. Every job is quoted individually for fair pricing and professional results.</p>
 </section>
 
-<!-- SERVICES -->
-<section class="section">
-  <h2>What We Do</h2>
-
-  <div class="grid">
-    <div class="box">
-      <h3>Lawn Mowing</h3>
-      <p>Even, professional cuts that keep your lawn looking sharp.</p>
-    </div>
-
-    <div class="box">
-      <h3>Edging & Trimming</h3>
-      <p>Detailed trimming for a clean finished appearance.</p>
-    </div>
-
-    <div class="box">
-      <h3>Yard Cleanups</h3>
-      <p>Full property cleanups for any season.</p>
-    </div>
-
-    <div class="box">
-      <h3>Mulching</h3>
-      <p>Fresh mulch installation to boost curb appeal.</p>
-    </div>
-
-    <div class="box">
-      <h3>Bush & Hedge Trimming</h3>
-      <p>Professional shaping and maintenance.</p>
-    </div>
-
-    <div class="box">
-      <h3>Small Tree & Brush Removal</h3>
-      <p>Light clearing and removal services.</p>
-    </div>
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card"><h3>Lawn Mowing</h3><p>Clean, even cuts that keep your yard looking sharp.</p></div>
+    <div class="card"><h3>Edging & Trimming</h3><p>Detailed edging for a finished look.</p></div>
+    <div class="card"><h3>Yard Cleanups</h3><p>Full property and seasonal cleanups.</p></div>
+    <div class="card"><h3>Mulching</h3><p>Fresh mulch to improve curb appeal.</p></div>
+    <div class="card"><h3>Bush & Hedge Trimming</h3><p>Professional shrub shaping.</p></div>
+    <div class="card"><h3>Brush Removal</h3><p>Light brush and overgrowth removal.</p></div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<section class="section" id="area">
+  <h2>Service Area</h2>
+  <p>Proudly serving Charlottesville, VA and surrounding areas.</p>
+</section>
+
+<section class="quote" id="contact">
   <h2>Get Your Free Quote Today</h2>
   <p>Call or text 434-960-2833</p>
   <br>
-  <a href="tel:4349602833" class="btn">Request Quote</a>
+  <a href="tel:4349602833" class="btn">Request Free Quote</a>
 </section>
 
 <footer>
