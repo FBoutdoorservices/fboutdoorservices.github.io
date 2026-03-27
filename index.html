@@ -3,140 +3,83 @@ import React from "react";
 export default function App() {
   return (
     <div className="font-sans text-gray-800 scroll-smooth">
+
       {/* NAVBAR */}
       <nav className="fixed w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">F&B Outdoor Services</h1>
-          <div className="hidden md:flex gap-8 font-medium">
+          <div className="hidden md:flex gap-6 font-medium">
             <a href="#services">Services</a>
-            <a href="#work">Our Work</a>
-            <a href="#reviews">Reviews</a>
             <a href="#about">About</a>
+            <a href="#contact">Contact</a>
             <a
-              href="tel:4349606691"
+              href="tel:4349602833"
               className="bg-green-600 text-white px-4 py-2 rounded-lg"
             >
-              Call Now
+              Call 434-960-2833
             </a>
           </div>
         </div>
       </nav>
 
       {/* HERO */}
-      <section
-        className="h-screen flex items-center justify-center text-white text-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1598908314732-07113901949e')",
-        }}
-      >
-        <div className="bg-black/60 p-10 rounded-xl">
-          <h2 className="text-5xl font-bold mb-6">
-            Make Your Yard Stand Out
-          </h2>
-          <p className="mb-6 text-lg">
-            Professional Lawn Care • Landscaping • Cleanups
+      <section className="h-screen flex items-center justify-center text-center text-white bg-green-600 px-6">
+        <div>
+          <h2 className="text-5xl font-bold mb-4">F&B Outdoor Services</h2>
+          <p className="mb-4 text-lg">
+            Professional Lawn Care & Landscaping
           </p>
-          <div className="flex justify-center gap-4">
-            <a
-              href="tel:4349606691"
-              className="bg-green-600 px-6 py-3 rounded-lg font-semibold"
-            >
-              Call Now
-            </a>
-            <a
-              href="#contact"
-              className="bg-white text-black px-6 py-3 rounded-lg font-semibold"
-            >
-              Free Quote
-            </a>
-          </div>
+          <p className="mb-6 font-semibold">
+            Serving Charlottesville, VA and surrounding areas
+          </p>
+          <a
+            href="tel:4349602833"
+            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold"
+          >
+            Call Now
+          </a>
         </div>
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-24">
-        <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
+      <section id="services" className="py-20 bg-gray-100">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
           {[
             "Lawn Mowing & Maintenance",
             "Mulching & Bed Edging",
             "Hedge Trimming & Pruning",
-            "Leaf Removal & Cleanups",
+            "Leaf Removal",
+            "Seasonal Cleanups",
             "Landscape Installations",
-            "Seasonal Property Care",
-          ].map((s, i) => (
-            <div key={i} className="shadow-xl p-8 rounded-2xl text-center">
-              <h3 className="text-xl font-semibold mb-4">{s}</h3>
-              <p>Reliable, detailed, and professional service every time.</p>
+          ].map((service, index) => (
+            <div key={index} className="p-6 shadow-md rounded-xl bg-white text-center">
+              <h3 className="font-semibold text-xl mb-2">{service}</h3>
             </div>
           ))}
         </div>
       </section>
 
-      {/* BEFORE / AFTER WORK */}
-      <section id="work" className="py-24 bg-gray-100">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Before & After Results
-        </h2>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
-          {[1, 2, 3, 4, 5, 6].map((n) => (
-            <img
-              key={n}
-              src={`https://source.unsplash.com/600x400/?lawn,grass,landscape&sig=${n}`}
-              className="rounded-xl shadow-lg"
-              alt="work"
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* REVIEWS */}
-      <section id="reviews" className="py-24">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          What Customers Say
-        </h2>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 px-6">
-          {[
-            "My yard has never looked better. Highly recommend!",
-            "Fast, reliable, and very professional work.",
-            "Best lawn service I’ve ever hired. 10/10.",
-          ].map((r, i) => (
-            <div key={i} className="p-8 shadow-xl rounded-2xl">
-              ⭐⭐⭐⭐⭐
-              <p className="mt-4">{r}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ABOUT OWNER */}
-      <section id="about" className="py-24 bg-gray-100">
-        <div className="max-w-5xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold mb-8">About F&B Outdoor Services</h2>
-          <p className="text-lg leading-relaxed">
-            We are a hardworking, local lawn care and landscaping business
-            focused on quality work and customer satisfaction. We treat every
-            property like our own and take pride in delivering clean, sharp,
-            and professional results.
-          </p>
-        </div>
+      {/* ABOUT */}
+      <section id="about" className="py-20 text-center px-6">
+        <h2 className="text-3xl font-bold mb-6">About F&B Outdoor Services</h2>
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed">
+          We are a local lawn care and landscaping company committed to providing reliable, professional service. Every property is treated with care and attention to detail.
+        </p>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-24">
-        <h2 className="text-4xl font-bold text-center mb-12">Get a Free Quote</h2>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="mb-6 text-lg">
-            Serving Charlottesville and surrounding areas
-          </p>
-          <a
-            href="tel:4349606691"
-            className="bg-green-600 text-white px-8 py-4 rounded-xl text-xl font-semibold inline-block"
-          >
-            Call 434-960-6691
-          </a>
-        </div>
+      <section id="contact" className="py-20 bg-green-600 text-white text-center px-6">
+        <h2 className="text-3xl font-bold mb-4">Request a Free Quote</h2>
+        <p className="mb-6 text-lg">
+          Serving Charlottesville, VA and surrounding areas. Call now: <strong>434-960-2833</strong>
+        </p>
+        <a
+          href="tel:4349602833"
+          className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold"
+        >
+          Call Now
+        </a>
       </section>
 
       {/* FOOTER */}
